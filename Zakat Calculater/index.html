@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+   
+    <h1 id="res1">    Zakat Calculator</h1>
+    <form onsubmit="clickhere(); return false; "> <br>
+    <h1>Nisab threshold</h1><br>
+   <label for="Materials">Value of Gold (approximately PKR 2,250,000.00)</label>
+    <input type="radio" name="Materials" value="Gold" >
+    <br>
+    <label for="Materials">Value of Silver (approximately PKR 175,000.00)</label>
+    <input type="radio" name="Materials" value="Silver" >
+
+  <h2>Cash</h2>
+  <label for="Cash"> Cash in hand & in bank accounts</label><br>
+  <input type="text" name="Cash" id="cash1"         placeholder="PKR">
+<br>
+  <label for="deposit"> Cash deposited for some future purpose, e.g. Hajj</label><br>
+  <input type="text" name="deposit" id="cash2"      placeholder="PKR">
+<br>
+  <label for="loan"> Cash given out in loans</label><br>
+  <input type="text" name="loan" id="cash3"       placeholder="PKR">
+ <br> 
+  <label for="funded"> Investments, shares, saving certificates, pensions funded by money in one’s possession</label><br>
+  <input type="text" name="funded" id="cash4"      placeholder="PKR">
+ <h1>Liabilities</h1> 
+  <label for="borrowed">Borrowed money, goods bought on credit </label><br>
+  <input type="text" name="borrowed"   id="cash5"  placeholder="PKR">
+  <br>
+  <label for="wages">Wages due to employees </label><br>
+  <input type="text" name="wages"  id="cash6"      placeholder="PKR">
+<br>
+  <label for="rent">Taxes, Rent, utility bills due immediately </label>
+  <br>
+  <input type="text" name="rent" id="cash7" placeholder="PKR">
+ <br> 
+ <h2>Gold and Silver</h2>
+ <label for="gold">Value of Gold that you possess </label>
+  <br>
+  <input type="text" name="gold" id="cash8" placeholder="PKR">
+  <br>
+  <label for="silver">Value of Silver that you possess </label>
+  <br>
+  <input type="text" name="silver"   id="cash9" placeholder="PKR">
+  <h2>Trade Goods</h2>
+  <label for="stock">Value of stock</label>
+  <br>
+  <input type="text" name="stock" id="cash10" placeholder="PKR">
+
+  <button type="submit">Click Here</button>
+
+  </form>
+
+ <script >
+function clickhere() {
+  let Cash = document.getElementById("cash1").value;
+  let deposit = document.getElementById("cash2").value;
+  let loan = document.getElementById("cash3").value;
+  let funded = document.getElementById("cash4").value;
+  let borrowed = document.getElementById("cash5").value;
+  let wages = document.getElementById("cash6").value;
+  let rent = document.getElementById("cash7").value;
+  let gold = document.getElementById("cash8").value;
+  let silver = document.getElementById("cash9").value;
+  let stock = document.getElementById("cash10").value;
+  res = Cash*deposit*loan*funded*borrowed*wages*rent*gold*silver*stock ;
+  alert(res)
+  document.getElementById("res1").innerHTML=(" Your Zakat Value is  " + res)
+
+  console.log(res)
+}
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+</body>
+</html>
